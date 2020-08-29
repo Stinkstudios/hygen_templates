@@ -1,0 +1,20 @@
+{
+	"exclude": ["node_modules/*", "./web/node_modules/**/*", "node_modules", "./**/node_modules/**/*"],
+	"brackets": {
+		"expect": "never",
+		"error": true
+	},
+	"colons": {
+		"expect": "never",
+		"error": false
+	},
+	"colors": false,
+	"semicolons": {
+		"expect": "never",
+		"error": true
+	},
+	"sortOrder": {
+		"expect": "grouped",
+		"error": true
+	}
+}
