@@ -1,0 +1,13 @@
+node_modules/
+web/env/*
+!web/env/.env.keys
+.DS_Store
+.env
+creds/
+
+web/functions/nextRouter
+web/public/_next
+web/public/_redirects
+
+web/development.toml
+web/production.toml
