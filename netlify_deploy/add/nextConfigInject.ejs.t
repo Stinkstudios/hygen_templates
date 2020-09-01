@@ -1,7 +1,7 @@
 ---
 to: 'web/next.config.js'
 inject: true
-after: const { readFileSync } = require('fs')
+after: const env = {}
 ---
 
 const toml = require('toml')
