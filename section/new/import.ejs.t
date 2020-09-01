@@ -1,6 +1,6 @@
 ---
 inject: true
-to: src/pages/index.jsx
-after: const sections = {
+to: src/sections/sections.js
+after: //add imports below
 ---
     <%= name %>: require('~/sections/<%= name %>'),

@@ -1,5 +1,6 @@
 ---
 to: web/src/pages/<%=name%>/index.jsx
+unless_exists: true
 ---
 import { HTMLHead } from '~/components'
 import DataInterface from '~/data'
