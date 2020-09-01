@@ -1,5 +1,5 @@
 ---
-to: src/sections/section.js
+to: web/src/sections/sections.js
 unless_exists: true
 ---
 const sections = {

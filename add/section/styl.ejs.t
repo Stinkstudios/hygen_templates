@@ -1,5 +1,5 @@
 ---
-to: src/sections/<%= name %>/<%= name %>.styl
+to: web/src/sections/<%= name %>/<%= name %>.styl
 unless_exists: true
 ---
 
