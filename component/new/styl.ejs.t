@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= name %>/<%= name %>.styl
+to: web/src/components/<%= name %>/<%= name %>.styl
 unless_exists: true
 ---
 

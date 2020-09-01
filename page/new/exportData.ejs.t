@@ -1,7 +1,6 @@
 ---
 inject: true
 to: 'web/src/data/json/json.js'
-after: const jsons = {
+after: //add exports below
 ---
-
     <%= name %>,
