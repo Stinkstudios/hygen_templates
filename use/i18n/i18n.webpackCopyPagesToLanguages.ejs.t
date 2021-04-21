@@ -1,5 +1,5 @@
 ---
-
+to: 'web/src/i18n/webpackCopyPagesToLanguages.js'
 ---
 const path = require('path')
 const CopyPlugin = require('copy-webpack-plugin')
@@ -34,6 +34,7 @@ const webpackCopyPagesToLanguages = (config) => {
 				return match
 			})
 			modifiedContentString = modifiedContentString.replace(/(ResourceBundle\()([^,]+)/g, _m => `${_m.split('(')[0]}('${language}'`)
+			modifiedContentString = modifiedContentString.replace(/i18nConfig.defaultLocale/g, `'${language}'`)
 			return modifiedContentString
 		} else {
 			return content

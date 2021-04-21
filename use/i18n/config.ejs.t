@@ -1,7 +1,7 @@
 ---
-to: 'web/config/i18n/config.js'
+to: 'web/src/i18n/config.js'
 ---
 module.exports = {
-	locales: <% languages %>,
-	defaultLocale: <% defaultLanguage %>
+	locales: <%- JSON.stringify(languages)%>,
+	defaultLocale: '<%= defaultLanguage %>'
 }
