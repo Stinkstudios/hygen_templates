@@ -8,6 +8,6 @@ after: \/\*\* CREATE ENV FROM CONFIG FILE \*\/
 const toml = require('toml')
 const parsedToml = toml.parse(readFileSync('./netlify.toml'))
 const base = parsedToml.build.environment
-const env = (process.env.NODE_ENV !== "development") ?
+env = (process.env.NODE_ENV !== "development") ?
 			Object.assign(base, parsedToml.context[process.env.NODE_ENV].environment) :
 			base;
