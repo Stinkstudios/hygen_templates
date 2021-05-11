@@ -1,5 +1,5 @@
 ---
-to: web/netlify.toml
+to: netlify.toml
 ---
 # Base configuration asdfasdff
 [build]

@@ -1,5 +1,5 @@
 ---
-to: web/src/pages/<%=name%>/index.jsx
+to: src/pages/<%=name%>/index.jsx
 unless_exists: true
 ---
 import { useTranslation } from 'react-i18next'

@@ -1,5 +1,5 @@
 ---
-to: "web/cloudbuild.yaml"
+to: "cloudbuild.yaml"
 unless_exists: true
 ---
 steps:

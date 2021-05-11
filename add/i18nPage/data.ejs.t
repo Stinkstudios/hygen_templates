@@ -1,5 +1,5 @@
 ---
-to: 'web/src/data/json/pages/<%= name %>.js'
+to: 'src/data/json/pages/<%= name %>.js'
 ---
 const data = {
 	key: 'value'

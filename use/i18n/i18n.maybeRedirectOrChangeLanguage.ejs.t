@@ -1,5 +1,5 @@
 ---
-to: 'web/src/i18n/maybeRedirectOrChangeLanguage.js'
+to: 'src/i18n/maybeRedirectOrChangeLanguage.js'
 ---
 import i18next from './i18next'
 import i18nConfig from './config'

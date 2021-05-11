@@ -1,5 +1,5 @@
 ---
-to: web/src/components/<%= name %>/<%= name %>.jsx
+to: src/components/<%= name %>/<%= name %>.jsx
 unless_exists: true
 ---
 import CSS from './<%= name %>.module.sass'

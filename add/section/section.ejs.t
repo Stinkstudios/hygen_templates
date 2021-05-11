@@ -1,5 +1,5 @@
 ---
-to: web/src/sections/<%= name %>/<%= name %>.jsx
+to: src/sections/<%= name %>/<%= name %>.jsx
 unless_exists: true
 ---
 import CSS from './<%= name %>.styl'

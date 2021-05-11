@@ -1,5 +1,5 @@
 ---
-to: 'web/src/i18n/webpackCopyPagesToLanguages.js'
+to: 'src/i18n/webpackCopyPagesToLanguages.js'
 ---
 const path = require('path')
 const CopyPlugin = require('copy-webpack-plugin')

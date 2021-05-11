@@ -1,5 +1,5 @@
 ---
-to: 'web/next.config.js'
+to: 'next.config.js'
 inject: true
 after: 'webpack: config => {'
 ---
