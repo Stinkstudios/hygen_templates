@@ -1,6 +1,6 @@
 ---
 inject: true
 to: 'web/src/components/components.js'
-after: //additional exports below
+append: true
 ---
-    <%= Name %>,
+    export { default as <%= Name %> } from './<%= name %>'
