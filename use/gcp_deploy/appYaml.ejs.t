@@ -3,6 +3,7 @@ to: "web/app.yaml"
 unless_exists: true
 ---
 runtime: nodejs12
+instance_class: F4
 
 service: default
 handlers:
@@ -10,7 +11,7 @@ handlers:
       secure: always
       static_files: out/index.html
       upload: out/index.html
-    - url: /([\/\w][^.#]+)$
+    - url: /([\/\w][^.#]+)\/?$
       static_files: out/\1/index.html
       upload: out/([\/\w][^.#]+)$.html
       secure: always
