@@ -4,7 +4,7 @@ unless_exists: true
 ---
 export const getStaticProps = async props => {
 	const DataInterface = require('~/data')
-	const data = await DataInterface.fetch({ type: 'pages', args: {name: '<%= name %>' }})
+	const data = await DataInterface.fetch({ type: 'page', args: {name: '<%= name %>' }})
 	return {
 		props: {
 			data
