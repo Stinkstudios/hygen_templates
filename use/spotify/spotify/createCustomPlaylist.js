@@ -22,7 +22,7 @@ export default async function createCustomPlaylist({
 		const { _tracks, fallback } = response.data
 		tracks = _tracks
 		if (fallback) {
-			tracks = tracks.slice(0, 50).map(t => t.uri)
+			tracks = tracks.slice(0, 50).map((t) => t.uri)
 		}
 	}
 
@@ -52,7 +52,7 @@ export default async function createCustomPlaylist({
 	// console.log(tracksWithInfo)
 	return {
 		playlistID,
-		tracks: tracksWithInfo.data.tracks.map(track => {
+		tracks: tracksWithInfo.data.tracks.map((track) => {
 			return {
 				uri: track.uri,
 				album: { images: [track.album.images[0]] },
@@ -67,7 +67,7 @@ export default async function createCustomPlaylist({
 function getTracksInfo({ accessToken, tracks }) {
 	const aObj = {
 		method: 'get',
-		url: `${spotifyApiBase}tracks?ids=${tracks.map(t => t.split('spotify:track:')[1]).join(',')}`,
+		url: `${spotifyApiBase}tracks?ids=${tracks.map((t) => t.split('spotify:track:')[1]).join(',')}`,
 		headers: {
 			Authorization: `Bearer ${accessToken}`,
 			'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ function getCustomTracks({ accessToken, data }) {
 		},
 		data
 	}
-	return new Promise(resolve => {
+	return new Promise((resolve) => {
 		function tryCreate() {
 			axios(axiosOptions)
 				.then(resolveResult)
