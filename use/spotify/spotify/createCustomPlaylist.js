@@ -90,9 +90,7 @@ function getCustomTracks({ accessToken, data }) {
 	}
 	return new Promise((resolve) => {
 		function tryCreate() {
-			axios(axiosOptions)
-				.then(resolveResult)
-				.catch(handleError)
+			axios(axiosOptions).then(resolveResult).catch(handleError)
 		}
 		function resolveResult(response) {
 			// console.log(response)

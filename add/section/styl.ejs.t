@@ -1,9 +1,7 @@
 ---
-to: src/sections/<%= name %>/<%= name %>.styl
+to: src/sections/<%= name %>/<%= name %>.module.sass
 unless_exists: true
 ---
 
 .m-<%= name %>
-	align-items center
-	padding 24px 0
-	width 100%
+	position: static
