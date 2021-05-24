@@ -5,6 +5,8 @@ after: \/\*\* CREATE ENV FROM CONFIG FILE \*\/
 ---
 
 /** NETLIFY */
+
+const { readFileSync } = require('fs')
 const toml = require('toml')
 const parsedToml = toml.parse(readFileSync('./netlify.toml'))
 const base = parsedToml.build.environment
