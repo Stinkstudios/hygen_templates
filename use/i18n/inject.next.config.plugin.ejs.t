@@ -1,6 +1,7 @@
 ---
 to: 'next.config.js'
 inject: true
-after: 'webpack: config => {'
+before: config\.module\.rules\.push
+skip_if: webpackCopyPagesToLanguages\(config\)
 ---
 		webpackCopyPagesToLanguages(config)
