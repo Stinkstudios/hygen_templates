@@ -1,5 +1,5 @@
 ---
-to: '/src/components/_lib/image/helpers/providers/image.lorempicsum.js'
+to: <%= cwd %>/src/components/_lib/image/helpers/providers/image.lorempicsum.js
 ---
 const getSources = () => {
 	return null
@@ -10,4 +10,3 @@ const getFallbackURL = ({ image }) => {
 }
 
 export default { getSources, getFallbackURL }
-

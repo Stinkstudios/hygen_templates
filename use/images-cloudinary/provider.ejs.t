@@ -1,5 +1,5 @@
 ---
-to: '/src/components/_lib/image/helpers/providers/image.cloudinary.js'
+to: <%= cwd %>/src/components/_lib/image/helpers/providers/image.cloudinary.js
 ---
 import breakpoints from '~/global/settings/breakpoints'
 

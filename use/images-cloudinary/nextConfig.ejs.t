@@ -1,6 +1,6 @@
 ---
 to: 'next.config.js'
 inject: true
-before: \/\*\* ADD IMAGE PROVIDERS AUTOMATICALLY - HYGEN ANCHOR \*\/
+before: ADD IMAGE PROVIDERS AUTOMATICALLY - HYGEN ANCHOR
 ---
 imageProviders += 'cloudinary'

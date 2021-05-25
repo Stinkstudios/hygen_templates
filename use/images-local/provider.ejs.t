@@ -1,5 +1,5 @@
 ---
-to: '/src/components/_lib/image/helpers/providers/image.local.js'
+to: <%= cwd %>/src/components/_lib/image/helpers/providers/image.local.js
 ---
 import images from '~/assets/images/images'
 

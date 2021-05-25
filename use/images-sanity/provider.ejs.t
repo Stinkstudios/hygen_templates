@@ -1,9 +1,9 @@
 ---
-to: '/src/components/_lib/image/helpers/providers/image.sanity.js'
+to: <%= cwd %>/src/components/_lib/image/helpers/providers/image.sanity.js
 ---
 import breakpoints from '~/global/settings/breakpoints'
 
-const urlFor = source => {
+const urlFor = (source) => {
 	const imageUrlBuilder = require('@sanity/image-url')
 
 	const builder = imageUrlBuilder({
@@ -16,7 +16,7 @@ const urlFor = source => {
 
 const generateSrcSet = ({ image, quality, sizes }) => {
 	const images = []
-	breakpoints.forEach(breakpoint => {
+	breakpoints.forEach((breakpoint) => {
 		let srcset = ''
 		if (sizes && sizes[breakpoint.name]) {
 			for (let i = 1; i < 4; i++) {
@@ -32,12 +32,7 @@ const generateSrcSet = ({ image, quality, sizes }) => {
 						.auto('format')
 						.url()
 				} else if (sizes[breakpoint.name].width) {
-					url = urlFor(image)
-						.width(sizes[breakpoint.name].width)
-						.quality(quality)
-						.dpr(i)
-						.auto('format')
-						.url()
+					url = urlFor(image).width(sizes[breakpoint.name].width).quality(quality).dpr(i).auto('format').url()
 				} else if (sizes[breakpoint.name].height) {
 					url = urlFor(image)
 						.height(sizes[breakpoint.name].height)
@@ -46,11 +41,7 @@ const generateSrcSet = ({ image, quality, sizes }) => {
 						.auto('format')
 						.url()
 				} else {
-					url = urlFor(image)
-						.quality(quality)
-						.dpr(i)
-						.auto('format')
-						.url()
+					url = urlFor(image).quality(quality).dpr(i).auto('format').url()
 				}
 				srcset += `${url} ${i}x`
 			}
@@ -61,10 +52,7 @@ const generateSrcSet = ({ image, quality, sizes }) => {
 }
 
 const getFallbackURL = ({ image, size, quality = 80 }) => {
-	const url = urlFor(image)
-		.quality(quality)
-		.auto('format')
-		.width(size.width)
+	const url = urlFor(image).quality(quality).auto('format').width(size.width)
 
 	if (size.height) {
 		return url.height(size.height).url()
