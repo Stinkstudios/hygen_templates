@@ -10,9 +10,9 @@ to: netlify.toml
 [build.environment]
 	DEPLOY_ENV                   = "development"
 	DATAINTERFACE_TYPE			 = "json"
-	IMAGE_PROVIDERS				 = "local,lorempicsum"
+	IMAGE_PROVIDERS				 = ""
 	URL                       	 = "https://dev--example.netlify.app"
-	NEXT_PUBLIC_GA_ID         	 = "UA-149378133-1"
+	GA_ID         	 			 = "G-XXXXXXXXXX"
 
 # Production branch
 [context.production]
