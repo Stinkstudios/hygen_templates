@@ -22,7 +22,7 @@ to: netlify.toml
 [context.production.environment]
 	URL                       = "https://example.com"
 	DEPLOY_ENV                = "production"
-	NODE_ENV                  = "production"]
+	NODE_ENV                  = "production"
 
 # Preview branch
 [context.stage.environment]
