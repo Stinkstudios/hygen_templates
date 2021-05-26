@@ -5,7 +5,7 @@ import {
     WebGLRenderer 
 } from 'three'
 
-import EventEmitter from './eventEmitter'
+import EventEmitter from '../helpers/eventEmitter'
 import Defaults from './defaultConfig'
 
 class BaseWebGl extends EventEmitter {

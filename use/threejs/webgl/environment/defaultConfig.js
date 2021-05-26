@@ -4,7 +4,7 @@ import {
     sRGBEncoding
 } from 'three'
 
-import Constants from './constants'
+import Constants from '../constants'
 const Defaults = {
     paused: true,
     camera: null,
@@ -36,7 +36,7 @@ const Defaults = {
     sceneConfig: {
         background: 0x111111
     },
-    events: Object.fromEntries(Object.keys(Constants.events).map(key => [key, {listeners:[]}])),
+    events: Object.fromEntries(Object.keys(Constants).map(key => [key, {listeners:[]}])),
     strictEvents: true
 }
 
