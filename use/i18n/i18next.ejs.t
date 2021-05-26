@@ -7,7 +7,7 @@ import { initReactI18next } from 'react-i18next'
 
 const i18nConfig = require('./config')
 const resources = {}
-i18nConfig.locales.forEach(l => resources[l] = {translation: {key: 'value'}})
+i18nConfig.locales.forEach((l) => resources[l] = { translation: { key: 'value' } })
 
 i18next
 	.use(LanguageDetector)
@@ -16,12 +16,11 @@ i18next
 		detection: {
 			order: ['path', 'localStorage', 'navigator']
 		},
-		// lng: i18nConfig.defaultLocale, //Detection doesn't seem to trigger if this is set
 		fallbackLng: i18nConfig.defaultLocale,
 		resources,
 		supportedLngs: i18nConfig.locales,
 		nonExplicitSupportedLngs: <%= specificLanguages ? false : true %>,
-		load: "<%= specificLanguages ? "all" : "languageOnly" %>", // 'languageOnly' matches en-US to en.  This should vary from project to project as sometimes a more naive translation approach is preferred, sometimes the same base language must vary between regions.  Comment out for codes to be matched specifically, but beware that en-US will no longer match en.
+		load: '<%= specificLanguages ? 'all' : 'languageOnly' %>', // 'languageOnly' matches en-US to en.  This should vary from project to project as sometimes a more naive translation approach is preferred, sometimes the same base language must vary between regions.  Comment out for codes to be matched specifically, but beware that en-US will no longer match en.
 		interpolation: {
 			escapeValue: false // not needed for react!!
 		},
@@ -29,6 +28,5 @@ i18next
 			wait: true
 		}
 	})
-
 
 export default i18next

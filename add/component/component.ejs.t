@@ -4,7 +4,7 @@ unless_exists: true
 ---
 import CSS from './<%= name %>.module.sass'
 
-const <%= Name %> = ({ data }) => {
+const <%= Name %> = () => {
 	return (
 		<div className={`${CSS['m-<%= name %>']} m-grid`}>
 			<%= Name %>
@@ -13,6 +13,3 @@ const <%= Name %> = ({ data }) => {
 }
 
 export default <%= Name %>
-
-
-
