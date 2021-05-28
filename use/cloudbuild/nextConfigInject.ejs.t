@@ -7,10 +7,11 @@ after: \/\*\* CREATE ENV FROM CONFIG FILE \*\/
 /** CLOUDBUILD */
 const dotenv = require('dotenv')
 const yaml = require('yaml')
-env = dotenv.config({ path: path.resolve(process.cwd(), `.env.local`) }).parsed
+const envFile = dotenv.config({ path: path.resolve(process.cwd(), `.env.local`) }).parsed
 
 //Overwrite .env.local with project wide config in case of change, like changing the default data source
-Object.assign(env, projectConfig)
+Object.assign(envFile, env)
+Object.assign(env, envFile)
 const envString = Object.keys(env).map((k) => `${k}=${env[k]}`).join('\n')
 writeFileSync('.env.local', envString)
 //Add properties to cloudbuild env.  Must recreate those env vars in the cloudbuild trigger
