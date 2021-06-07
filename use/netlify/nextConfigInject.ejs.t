@@ -1,9 +1,9 @@
 ---
-to: 'web/next.config.js'
+to: 'next.config.js'
 inject: true
 after: \/\*\* CREATE ENV FROM CONFIG FILE \*\/
+skip_if: readFileSync\('\.\/netlify\.toml'\)
 ---
-
 /** NETLIFY */
 const toml = require('@iarna/toml')
 const parsedToml = toml.parse(readFileSync('./netlify.toml'))

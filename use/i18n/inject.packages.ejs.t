@@ -1,5 +1,5 @@
 ---
-to: 'web/package.json'
+to: 'package.json'
 inject: true
 after: '"dependencies": {'
 ---

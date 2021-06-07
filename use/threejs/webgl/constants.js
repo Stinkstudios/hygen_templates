@@ -1,0 +1,7 @@
+const Constants = {
+    ON_FRAME: 'ON_FRAME',
+    DESTROY: 'DESTROY',
+    MOUSE_UP_INTERSECTED: 'MOUSE_UP_INTERSECTED',
+    MOUSE_MOVE_INTERSECTED: 'MOUSE_MOVE_INTERSECTED'
+}
+export default Constants

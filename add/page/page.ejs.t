@@ -1,10 +1,12 @@
 ---
-to: web/src/pages/<%=name%>/index.jsx
+to: src/pages/<%=name%>/index.jsx
 unless_exists: true
 ---
-export const getStaticProps = async props => {
+import CSS from './<%= name %>.module.sass'
+
+export const getStaticProps = async (props) => {
 	const DataInterface = require('~/data')
-	const data = await DataInterface.fetch({ type: 'pages', args: {name: '<%= name %>' }})
+	const data = await DataInterface.fetch({ type: 'page', args: { name: '<%= name %>' }})
 	return {
 		props: {
 			data
@@ -12,10 +14,7 @@ export const getStaticProps = async props => {
 	}
 }
 
-import CSS from './<%= name %>.module.sass'
-
-
-const <%= Name %> = ({ data }) => {
+const <%= Name %> = () => {
 	return (
 		<div className={`${CSS['p-<%= name %> ']}`}>
 			<div><%= name %> </div>
@@ -26,7 +25,4 @@ const <%= Name %> = ({ data }) => {
 <%= Name %>.displayName = '<%= Name %> '
 <%= Name %>.layout = 'default'
 
-export default <%= Name %> 
-
-
-
+export default <%= Name %>

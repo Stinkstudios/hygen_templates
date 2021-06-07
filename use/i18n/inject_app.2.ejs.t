@@ -1,5 +1,5 @@
 ---
-to: 'web/src/pages/_app.jsx'
+to: 'src/pages/_app.jsx'
 inject: true
 before: 'return \('
 ---

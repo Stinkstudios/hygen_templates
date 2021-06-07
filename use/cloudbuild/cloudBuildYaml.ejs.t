@@ -1,5 +1,5 @@
 ---
-to: "web/cloudbuild.yaml"
+to: "cloudbuild.yaml"
 unless_exists: true
 ---
 steps:
@@ -11,6 +11,7 @@ steps:
       entrypoint: npm
       args: ["run", "prod"]
       dir: "web"
+      env:
           - "GOOGLE_CLOUD_PROJECT=$PROJECT_ID"
     - name: "gcr.io/cloud-builders/gcloud"
       args: ["app", "deploy", "--no-promote", "--version=$BRANCH_NAME"]

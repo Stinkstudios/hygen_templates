@@ -1,8 +1,6 @@
 ---
-to: web/src/components/<%= name %>/<%= name %>.module.sass
+to: src/components/<%= name %>/<%= name %>.module.sass
 unless_exists: true
 ---
-.m-<%= name %>
-	align-items: center
-	padding: 24px 0
-	width: 100%
+.<%= name %>
+	position: static

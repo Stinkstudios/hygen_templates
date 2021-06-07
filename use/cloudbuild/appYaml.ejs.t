@@ -1,5 +1,5 @@
 ---
-to: "web/app.yaml"
+to: "app.yaml"
 unless_exists: true
 ---
 runtime: nodejs12

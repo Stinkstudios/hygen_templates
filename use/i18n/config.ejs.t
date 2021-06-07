@@ -1,5 +1,5 @@
 ---
-to: 'web/src/i18n/config.js'
+to: 'src/i18n/config.js'
 ---
 module.exports = {
 	locales: <%- JSON.stringify(languages)%>,

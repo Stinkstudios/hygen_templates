@@ -1,13 +1,13 @@
 ---
-to: web/netlify.toml
+to: netlify.toml
 ---
 [build]
   ignore = "git diff --quiet HEAD^ HEAD ."
   command = "DEPLOY_ENV=development npm run build"
   functions = "publish_functions"
   publish = "out"
-
 [build.environment]
+  DEFAULT_DATA_SOURCE = "json"
   DEPLOY_ENV = "development"
   IMAGE_PROVIDERS = ""
  
