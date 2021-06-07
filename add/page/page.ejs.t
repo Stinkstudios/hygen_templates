@@ -10,7 +10,8 @@ export const getStaticProps = async (props) => {
 	return {
 		props: {
 			data
-		}
+		},
+		revalidate: process.env.DEPLOY_ENV !== 'production' ? 5 : false
 	}
 }
 
