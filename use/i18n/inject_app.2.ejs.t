@@ -1,7 +1,7 @@
 ---
 to: 'src/pages/_app.jsx'
 inject: true
-before: 'return \('
+after: 'const App = ({'
 ---
 
     useLayoutEffect(() => {maybeRedirectOrChangeLanguage(router)})
