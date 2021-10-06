@@ -1,18 +1,9 @@
 ---
-to: src/pages/<%=name%>/index.jsx
+to: "<%= (pageType === 'dynamic') ? `src/pages/[${name}]/index.jsx` : `src/pages/${name}/index.jsx` %>"
 unless_exists: true
 ---
 import CSS from './<%= name %>.module.sass'
-
-export const getStaticProps = async (props) => {
-	const DataInterface = require('~/data')
-	const data = await DataInterface.fetch({ type: 'page', args: { name: '<%= name %>' }})
-	return {
-		props: {
-			data
-		}
-	}
-}
+export { getStaticProps<% if(pageType === "dynamic") { %>, getStaticPaths <% } %> } from './<%= name %>.gsp'
 
 const <%= Name %> = () => {
 	return (
