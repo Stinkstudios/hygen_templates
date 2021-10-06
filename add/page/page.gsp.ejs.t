@@ -9,7 +9,8 @@ export const getStaticProps = async () => {
 	return {
 		props: {
 			data
-		}
+		},
+		revalidate: process.env.DEPLOY_ENV !== 'production' ? 5 : false
 	}
 }
 <% if (pageType === "dynamic") { %> 

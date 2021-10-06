@@ -1,50 +1,47 @@
 ---
 to: netlify.toml
 ---
-# Base configuration asdfasdff
 [build]
-	ignore    = "git diff --quiet HEAD^ HEAD web"
-	command   = "npm run setup-serversideprops && npm run build && npm run next-on-netlify"
-	publish   = "out_publish"
-	functions = "out_functions"
+  ignore = "git diff --quiet HEAD^ HEAD ."
+  command = "DEPLOY_ENV=development npm run build"
+  functions = "publish_functions"
+  publish = "out"
 [build.environment]
-	DEPLOY_ENV                   = "development"
-	DATAINTERFACE_TYPE			 = "json"
-	IMAGE_PROVIDERS				 = ""
-	URL                       	 = "https://dev--example.netlify.app"
-	GA_ID         	 			 = "G-XXXXXXXXXX"
-
-# Production branch
+  DEFAULT_DATA_SOURCE = "json"
+  DEPLOY_ENV = "development"
+  IMAGE_PROVIDERS = ""
+ 
 [context.production]
-	command = "echo 'Production'; npm run prod"
-	publish = "out"
+  command = "echo 'Production'; npm run prod"
+  publish = "out"
 
 [context.production.environment]
-	URL                       = "https://example.com"
-	DEPLOY_ENV                = "production"
-	NODE_ENV                  = "production"
+  URL = "https://example.com"
+  DEPLOY_ENV = "production"
+  SANITY_DATASET = "production"
+  NODE_ENV = "production"
 
-# Preview branch
+[context.stage]
+  command = "echo 'Stage'; DEPLOY_ENV=stage npm run build"
+  publish = "out"
+
 [context.stage.environment]
-	DEPLOY_ENV                = "stage"
-	URL                       = "https://stage--example.netlify.app"
+  DEPLOY_ENV = "stage"
+  URL = "https://stage--example.netlify.app"
 
-# QA branch
 [context.qa]
-	command = "echo 'QA'; npm run prod"
-	publish = "out"
-[context.qa.environment]
-	DEPLOY_ENV                = "qa"
-	PREVIEW                   = "false"
-	URL                       = "https://qa--example.netlify.app"
+  command = "echo 'QA'; DEPLOY_ENV=qa npm run build"
+  publish = "out"
 
+[context.qa.environment]
+  DEPLOY_ENV = "qa"
+  PREVIEW = "false"
+  URL = "https://qa--example.netlify.app"
 
 [[plugins]]
-package  = "netlify-plugin-cache-nextjs"
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
-	from = "/*"
-	to = "/404.html"
-	status = 404
-
-
+  from = "/*"
+  to = "/404.html"
+  status = 404

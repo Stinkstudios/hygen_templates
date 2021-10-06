@@ -9,5 +9,7 @@ const toml = require('@iarna/toml')
 const parsedToml = toml.parse(readFileSync('./netlify.toml'))
 Object.assign(parsedToml.build.environment, env)
 const base = parsedToml.build.environment
-writeFileSync('./netlify.toml', toml.stringify(parsedToml))
-env = (process.env.NODE_ENV !== 'development') ? Object.assign(base, parsedToml.context[process.env.NODE_ENV].environment) : base
+const deployEnv = process.env.DEPLOY_ENV || "development"
+env = (deployEnv !== "development") ?
+			Object.assign(base, parsedToml.context[deployEnv].environment) :
+			base;
