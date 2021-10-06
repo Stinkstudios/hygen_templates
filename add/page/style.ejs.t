@@ -1,6 +1,7 @@
 ---
-to: "<%= (pageType === 'dynamic') ? `src/pages/[${name}]/${name}.module.sass` : `src/pages/${name}/${name}.module.sass` %>"
+to: "<%= (pageType === 'dynamic') ? `src/pages/[${name}]/${name}.module.scss` : `src/pages/${name}/${name}.module.scss` %>"
 unless_exists: true
 ---
-.p-<%=name %>
+.p-<%=name %> {
 	position: static
+}
