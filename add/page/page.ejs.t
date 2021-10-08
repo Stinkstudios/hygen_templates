@@ -7,7 +7,7 @@ import CSS from './<%= name %>.module.sass'
 export { getStaticProps<% if(pageType === "dynamic") { %>, getStaticPaths <% } %> } from './<%= name %>.gsp'
 import { defaultPageTransition } from '~/helpers'
 
-const <%= Name %> = () => {
+const <%= Name %> = ({ data }, ref) => {
 	const $element = useRef()
 	useImperativeHandle(ref, defaultPageTransition({ $element }), [])
 	return (
