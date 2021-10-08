@@ -5,6 +5,7 @@ after: \/\*\* CREATE ENV FROM CONFIG FILE \*\/
 ---
 
 /** CLOUDBUILD */
+const { readFileSync } = require('fs')
 const dotenv = require('dotenv')
 const yaml = require('yaml')
 const envFile = dotenv.config({ path: path.resolve(process.cwd(), `.env.local`) }).parsed
