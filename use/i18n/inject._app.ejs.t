@@ -1,7 +1,7 @@
 ---
 to: 'src/pages/_app.jsx'
 inject: true
-before: '\/\*\* COMPONENTS \*\/'
+after: '\/\*\* HELPERS \*\/'
 ---
 /** i18n */
 import maybeRedirectOrChangeLanguage from '~/i18n/maybeRedirectOrChangeLanguage'
