@@ -10,6 +10,8 @@ to: netlify.toml
   DEFAULT_DATA_SOURCE = "json"
   DEPLOY_ENV = "development"
   IMAGE_PROVIDERS = ""
+
+  [secrets]
  
 [context.production]
   command = "echo 'Production'; npm run prod"
