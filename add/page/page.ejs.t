@@ -2,7 +2,7 @@
 to: "<%= (pageType === 'dynamic') ? `src/pages/[${name}]/index.jsx` : `src/pages/${name}/index.jsx` %>"
 unless_exists: true
 ---
-import { forwardRef, useImperativeHandle } from 'react'
+import { useRef, forwardRef, useImperativeHandle } from 'react'
 import CSS from './<%= name %>.module.sass'
 export { getStaticProps<% if(pageType === "dynamic") { %>, getStaticPaths <% } %> } from './<%= name %>.gsp'
 import { defaultPageTransition } from '~/helpers'
