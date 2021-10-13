@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= name %>/<%= name %>.jsx
+to: "<%= locals.pageName ? `src/components/_pages/${pageName}/${name}/${name}.jsx` : `src/components/${name}/${name}.jsx` %>"
 unless_exists: true
 ---
 import CSS from './<%= name %>.module.sass'
