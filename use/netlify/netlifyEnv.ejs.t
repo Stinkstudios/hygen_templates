@@ -2,6 +2,11 @@
 to: next-config/envNetlify.js
 ---
 /** NETLIFY */
+const path = require('path')
+const projectConfig = require('project-wide-config')
+// eslint-disable-next-line prefer-const
+let env = projectConfig.baseEnv
+
 const dotenv = require('dotenv')
 const envFile = dotenv.config({ path: path.resolve(process.cwd(), `.env.local`) }).parsed
 Object.assign(env, envFile)
@@ -24,3 +29,15 @@ env = deployEnv !== 'development' ? Object.assign(base, parsedToml.context[deplo
 Object.keys(parsedToml.secrets).forEach((s) => {
 	env[s] = process.env[s]
 })
+
+
+/* ADD IMAGE PROVIDERS AUTOMATICALLY - DO NOT MODIFY */
+// // eslint-disable-next-line prefer-const
+// let imageProviders = ''
+// /* ADD IMAGE PROVIDERS AUTOMATICALLY - HYGEN ANCHOR */
+// if (imageProviders !== '') {
+// 	env.IMAGE_PROVIDERS = imageProviders
+// }
+
+
+module.exports = env
