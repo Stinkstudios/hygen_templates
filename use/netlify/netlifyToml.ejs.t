@@ -11,7 +11,7 @@ to: netlify.toml
   DEPLOY_ENV = "development"
   IMAGE_PROVIDERS = ""
 
-  [secrets]
+[secrets]
  
 [context.production]
   command = "echo 'Production'; npm run prod"

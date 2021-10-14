@@ -1,8 +1,5 @@
 ---
-to: 'next.config.js'
-inject: true
-after: \/\*\* CREATE ENV FROM CONFIG FILE \*\/
-skip_if: readFileSync\('\.\/netlify\.toml'\)
+to: next-config/envNetlify.js
 ---
 /** NETLIFY */
 const dotenv = require('dotenv')

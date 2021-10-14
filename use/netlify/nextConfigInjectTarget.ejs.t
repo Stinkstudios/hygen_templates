@@ -1,5 +1,5 @@
 ---
-to: 'next.config.js'
+to: 'next-config/index.js'
 inject: true
 after: 	const nextConfig = {
 skip_if: const toml = require\('@iarna/toml'\)
