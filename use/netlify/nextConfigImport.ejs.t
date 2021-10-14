@@ -1,5 +1,5 @@
 ---
-to: 'next.config.js'
+to: 'next-config/index.js'
 inject: true
 after: let env = {}
 ---
