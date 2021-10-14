@@ -2,7 +2,7 @@ const path = require('path')
 const { readdirSync } = require('fs')
 const pageOptions = readdirSync(path.join(process.cwd(), 'src/pages'), { withFileTypes: true })
 	.filter((dirent) => dirent.isDirectory())
-	.map((dirent) => dirent.name)
+	.map((dirent) => dirent.name.replace('[', '').replace(']', ''))
 
 module.exports = {
 	prompt: ({ prompter, args }) =>

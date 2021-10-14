@@ -1,4 +1,4 @@
 ---
-to: "<%= pageName ? `src/components/_pages/${name}/index.js` : null %>"
+to: src/components/_pages/<%=name%>/index.js
 unless_exists: true
 ---
