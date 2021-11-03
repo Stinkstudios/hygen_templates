@@ -21,7 +21,6 @@ to: netlify.toml
   URL = "https://example.com"
   DEPLOY_ENV = "production"
   SANITY_DATASET = "production"
-  NODE_ENV = "production"
 
 [context.stage]
   command = "echo 'Stage'; DEPLOY_ENV=stage npm run build"
