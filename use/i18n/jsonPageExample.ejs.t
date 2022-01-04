@@ -1,5 +1,5 @@
 ---
-to: "./src/data/json/pages/home__i18nExample.js"
+to: "./data-interface/json/pages/home__i18nExample.js"
 ---
 const data = {
 	en: {

@@ -4,7 +4,7 @@ unless_exists: true
 ---
 
 export const getStaticProps = async () => {
-	const DataInterface = require('~/data')
+	const DataInterface = require('^/data-interface')
 	const data = await DataInterface.fetch({ type: 'page', args: { name: '<%= name %>' } })
 	return {
 		props: {
@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 }
 <% if (pageType === "dynamic") { %> 
 export const getStaticPaths = async () => {
-	const DataInterface = require('~/data')
+	const DataInterface = require('^/data-interface')
 	const pages = await DataInterface.fetch({ type: '<%= name %>Slugs', dataType: 'json' })
 	const paths = pages.map(page => {
 		return {

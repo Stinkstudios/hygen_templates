@@ -1,6 +1,6 @@
 ---
 inject: true
-to: 'src/data/json/pages/index.js'
+to: 'data-interface/json/pages/index.js'
 after: const pages = {
 ---
     <%= name %>: require('./<%= name %>'),
