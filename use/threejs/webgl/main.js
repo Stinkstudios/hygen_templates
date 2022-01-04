@@ -13,7 +13,7 @@ class Main {
         this.environment.on(Constants.ON_FRAME, this.onFrame.bind(this))
         WindowSize.subscribe(this.environment.setSize.bind(this.environment))
         this.interactions = new Interactions({trackMouseMove: true})
-        console.log(this.interactions)
+        // console.log(this.interactions)
     }
 
     init() {
@@ -23,7 +23,7 @@ class Main {
         this.environment.scene.add(this.box.mesh)
         this.environment.start()
         this.interactions.on(Constants.MOUSE_MOVE_INTERSECTED, (e) => {
-            console.log(e)
+            // console.log(e)
         })
         this.interactions.addElement(this.box.mesh)
         this.interactions.start()
