@@ -16,11 +16,11 @@ export const getStaticProps = async () => {
 <% if (pageType === "dynamic") { %> 
 export const getStaticPaths = async () => {
 	const DataInterface = require('data-interface')
-	const pages = await DataInterface.fetch({ type: '<%= name %>Slugs', dataType: 'json' })
+	const pages = await DataInterface.fetch({ type: 'page',  args: { name: '<%= name %>Slugs' } })
 	const paths = pages.map(page => {
 		return {
 			params: {
-				<%= name %>Slug: page.slug
+				<%= name %>: page.slug
 			}
 		}
 	})

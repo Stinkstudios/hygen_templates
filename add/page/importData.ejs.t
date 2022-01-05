@@ -5,5 +5,5 @@ after: const pages = {
 ---
     <%= name %>: require('./<%= name %>'),
     <% if(pageType === 'dynamic'){ -%>
-    <%= name %>Slugs: require('<%= name %>Slugs'),
+    <%= name %>Slugs: require('./<%= name %>Slugs'),
     <% } -%>
