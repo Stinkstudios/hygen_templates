@@ -3,5 +3,5 @@ to: "<%= locals.pageName ? `src/components/_pages/${pageName}/${name}/${name}.mo
 unless_exists: true
 ---
 .<%= name %> {
-	position: static
+
 }
