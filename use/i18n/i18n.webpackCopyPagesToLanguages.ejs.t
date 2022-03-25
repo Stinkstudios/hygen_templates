@@ -38,7 +38,7 @@ const webpackCopyPagesToLanguages = (config) => {
 		new CopyPlugin({
 			patterns: i18nConfig.locales.map((language) => {
 				return {
-					from: './src/pages/**/*',
+					from: './src/pages',
 					globOptions: {
 						dot: true,
 						gitignore: true,
